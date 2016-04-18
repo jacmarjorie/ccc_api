@@ -18,7 +18,7 @@ message Axis {
 * A key is defined as an entity identifier. 
 **/
 message KeySpace {
-	int32 id = 1;
+	string id = 1;
 	string name = 2;
 	string axis_name = 3;
 	repeated string keys = 4;
@@ -31,7 +31,7 @@ message KeySpace {
 * a key must belong to a keyspace
 **/
 message Dimension {
-	int32 keySpaceId = 1;
+	string keySpaceId = 1;
 	repeated string keys = 2;
 }
 
