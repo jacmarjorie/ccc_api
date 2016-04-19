@@ -41,7 +41,7 @@ search by name, axis, and keys
 restrictive get by id 
 */
 message SearchKeySpacesRequest {
-  repeated int32 keyspace_ids = 1;
+  repeated string keyspace_ids = 1;
   repeated string names = 2;
   repeated string axis_names = 3;
   repeated string keys = 4;
