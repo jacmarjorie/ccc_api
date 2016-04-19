@@ -2,49 +2,23 @@ syntax = "proto3";
 
 package framespace;
 import "proto/framespace/framespace.proto";
-import "google/api/annotations.proto";
 
 service FrameSpaceService {
 
   // Gets a list of available axes 
-  rpc SearchAxes(SearchAxesRequest) returns (SearchAxesResponse) {
-    option (google.api.http) = {
-      post: "/v1/frame/axes/search"
-      body: "*"
-    };
-  }
+  rpc SearchAxes(SearchAxesRequest) returns (SearchAxesResponse);
 
   // Gets a list of available KeySpaces for an axis
-  rpc SearchKeySpaces(SearchKeySpacesRequest) returns (SearchKeySpacesResponse) {
-    option (google.api.http) = {
-      post: "/v1/frame/keyspaces/search"
-      body: "*"
-    };
-  }
+  rpc SearchKeySpaces(SearchKeySpacesRequest) returns (SearchKeySpacesResponse);
 
   // Gets a list of available Units of measurement 
-  rpc SearchUnits(SearchUnitsRequest) returns (SearchUnitsResponse) {
-    option (google.api.http) = {
-      post: "/v1/frame/units/search"
-      body: "*"
-    };
-  }
+  rpc SearchUnits(SearchUnitsRequest) returns (SearchUnitsResponse);
 
   // Get a list of DataFrames
-  rpc SearchDataFrames(SearchDataFramesRequest) returns (SearchDataFramesResponse) {
-    option(google.api.http) = {
-      post: "/v1/frame/dataframes/search"
-      body: "*"
-    };
-  }
+  rpc SearchDataFrames(SearchDataFramesRequest) returns (SearchDataFramesResponse);
 
   // Subset a DataFrame
-  rpc SliceDataFrame(SliceDataFrameRequest) returns (DataFrame) {
-    option(google.api.http) = {
-      post: "/v1/frame/dataframe/slice"
-      body: "*"
-    };
-  }
+  rpc SliceDataFrame(SliceDataFrameRequest) returns (DataFrame);
 
 }
 
@@ -86,7 +60,8 @@ available in FrameSpace
 */ 
 message SearchUnitsRequest {
   repeated int32 names = 1;
-  repeated string types = 2;
+  int32 page_size = 2;
+  string page_token = 3;
 }
 
 message SearchUnitsResponse {
