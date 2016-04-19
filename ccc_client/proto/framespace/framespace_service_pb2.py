@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='proto/framespace/framespace_service.proto',
   package='framespace',
   syntax='proto3',
-  serialized_pb=_b('\n)proto/framespace/framespace_service.proto\x12\nframespace\x1a!proto/framespace/framespace.proto\"I\n\x11SearchAxesRequest\x12\r\n\x05names\x18\x01 \x03(\t\x12\x11\n\tpage_size\x18\x02 \x01(\x05\x12\x12\n\npage_token\x18\x03 \x01(\t\"M\n\x12SearchAxesResponse\x12\x1e\n\x04\x61xes\x18\x01 \x03(\x0b\x32\x10.framespace.Axis\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t\"\x86\x01\n\x16SearchKeySpacesRequest\x12\x14\n\x0ckeyspace_ids\x18\x01 \x03(\x05\x12\r\n\x05names\x18\x02 \x03(\t\x12\x12\n\naxis_names\x18\x03 \x03(\t\x12\x0c\n\x04keys\x18\x04 \x03(\t\x12\x11\n\tpage_size\x18\x05 \x01(\x05\x12\x12\n\npage_token\x18\x06 \x01(\t\"[\n\x17SearchKeySpacesResponse\x12\'\n\tkeyspaces\x18\x01 \x03(\x0b\x32\x14.framespace.KeySpace\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t\"2\n\x12SearchUnitsRequest\x12\r\n\x05names\x18\x01 \x03(\x05\x12\r\n\x05types\x18\x02 \x03(\t\"O\n\x13SearchUnitsResponse\x12\x1f\n\x05units\x18\x01 \x03(\x0b\x32\x10.framespace.Unit\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t\"\x8e\x01\n\x17SearchDataFramesRequest\x12\x15\n\rdataframe_ids\x18\x01 \x03(\t\x12\x14\n\x0ckeyspace_ids\x18\x02 \x03(\x05\x12\x1f\n\x05units\x18\x03 \x03(\x0b\x32\x10.framespace.Unit\x12\x11\n\tpage_size\x18\x04 \x01(\x05\x12\x12\n\npage_token\x18\x05 \x01(\t\"^\n\x18SearchDataFramesResponse\x12)\n\ndataframes\x18\x01 \x03(\x0b\x32\x15.framespace.DataFrame\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t\"\x81\x01\n\x15SliceDataFrameRequest\x12\x14\n\x0c\x64\x61taframe_id\x18\x01 \x01(\t\x12(\n\tnew_major\x18\x02 \x01(\x0b\x32\x15.framespace.Dimension\x12(\n\tnew_minor\x18\x03 \x01(\x0b\x32\x15.framespace.Dimension2\xb7\x03\n\x11\x46rameSpaceService\x12K\n\nSearchAxes\x12\x1d.framespace.SearchAxesRequest\x1a\x1e.framespace.SearchAxesResponse\x12Z\n\x0fSearchKeySpaces\x12\".framespace.SearchKeySpacesRequest\x1a#.framespace.SearchKeySpacesResponse\x12N\n\x0bSearchUnits\x12\x1e.framespace.SearchUnitsRequest\x1a\x1f.framespace.SearchUnitsResponse\x12]\n\x10SearchDataFrames\x12#.framespace.SearchDataFramesRequest\x1a$.framespace.SearchDataFramesResponse\x12J\n\x0eSliceDataFrame\x12!.framespace.SliceDataFrameRequest\x1a\x15.framespace.DataFrameb\x06proto3')
+  serialized_pb=_b('\n)proto/framespace/framespace_service.proto\x12\nframespace\x1a!proto/framespace/framespace.proto\"I\n\x11SearchAxesRequest\x12\r\n\x05names\x18\x01 \x03(\t\x12\x11\n\tpage_size\x18\x02 \x01(\x05\x12\x12\n\npage_token\x18\x03 \x01(\t\"M\n\x12SearchAxesResponse\x12\x1e\n\x04\x61xes\x18\x01 \x03(\x0b\x32\x10.framespace.Axis\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t\"\x86\x01\n\x16SearchKeySpacesRequest\x12\x14\n\x0ckeyspace_ids\x18\x01 \x03(\x05\x12\r\n\x05names\x18\x02 \x03(\t\x12\x12\n\naxis_names\x18\x03 \x03(\t\x12\x0c\n\x04keys\x18\x04 \x03(\t\x12\x11\n\tpage_size\x18\x05 \x01(\x05\x12\x12\n\npage_token\x18\x06 \x01(\t\"[\n\x17SearchKeySpacesResponse\x12\'\n\tkeyspaces\x18\x01 \x03(\x0b\x32\x14.framespace.KeySpace\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t\"J\n\x12SearchUnitsRequest\x12\r\n\x05names\x18\x01 \x03(\x05\x12\x11\n\tpage_size\x18\x02 \x01(\x05\x12\x12\n\npage_token\x18\x03 \x01(\t\"O\n\x13SearchUnitsResponse\x12\x1f\n\x05units\x18\x01 \x03(\x0b\x32\x10.framespace.Unit\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t\"\x8e\x01\n\x17SearchDataFramesRequest\x12\x15\n\rdataframe_ids\x18\x01 \x03(\t\x12\x14\n\x0ckeyspace_ids\x18\x02 \x03(\x05\x12\x1f\n\x05units\x18\x03 \x03(\x0b\x32\x10.framespace.Unit\x12\x11\n\tpage_size\x18\x04 \x01(\x05\x12\x12\n\npage_token\x18\x05 \x01(\t\"^\n\x18SearchDataFramesResponse\x12)\n\ndataframes\x18\x01 \x03(\x0b\x32\x15.framespace.DataFrame\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t\"\x81\x01\n\x15SliceDataFrameRequest\x12\x14\n\x0c\x64\x61taframe_id\x18\x01 \x01(\t\x12(\n\tnew_major\x18\x02 \x01(\x0b\x32\x15.framespace.Dimension\x12(\n\tnew_minor\x18\x03 \x01(\x0b\x32\x15.framespace.Dimension2\xb7\x03\n\x11\x46rameSpaceService\x12K\n\nSearchAxes\x12\x1d.framespace.SearchAxesRequest\x1a\x1e.framespace.SearchAxesResponse\x12Z\n\x0fSearchKeySpaces\x12\".framespace.SearchKeySpacesRequest\x1a#.framespace.SearchKeySpacesResponse\x12N\n\x0bSearchUnits\x12\x1e.framespace.SearchUnitsRequest\x1a\x1f.framespace.SearchUnitsResponse\x12]\n\x10SearchDataFrames\x12#.framespace.SearchDataFramesRequest\x1a$.framespace.SearchDataFramesResponse\x12J\n\x0eSliceDataFrame\x12!.framespace.SliceDataFrameRequest\x1a\x15.framespace.DataFrameb\x06proto3')
   ,
   dependencies=[proto_dot_framespace_dot_framespace__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -230,9 +230,16 @@ _SEARCHUNITSREQUEST = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='types', full_name='framespace.SearchUnitsRequest.types', index=1,
-      number=2, type=9, cpp_type=9, label=3,
-      has_default_value=False, default_value=[],
+      name='page_size', full_name='framespace.SearchUnitsRequest.page_size', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='page_token', full_name='framespace.SearchUnitsRequest.page_token', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -249,7 +256,7 @@ _SEARCHUNITSREQUEST = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=476,
-  serialized_end=526,
+  serialized_end=550,
 )
 
 
@@ -286,8 +293,8 @@ _SEARCHUNITSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=528,
-  serialized_end=607,
+  serialized_start=552,
+  serialized_end=631,
 )
 
 
@@ -345,8 +352,8 @@ _SEARCHDATAFRAMESREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=610,
-  serialized_end=752,
+  serialized_start=634,
+  serialized_end=776,
 )
 
 
@@ -383,8 +390,8 @@ _SEARCHDATAFRAMESRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=754,
-  serialized_end=848,
+  serialized_start=778,
+  serialized_end=872,
 )
 
 
@@ -428,8 +435,8 @@ _SLICEDATAFRAMEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=851,
-  serialized_end=980,
+  serialized_start=875,
+  serialized_end=1004,
 )
 
 _SEARCHAXESRESPONSE.fields_by_name['axes'].message_type = proto_dot_framespace_dot_framespace__pb2._AXIS
