@@ -9,6 +9,7 @@ service FrameSpaceService {
   rpc SearchAxes(SearchAxesRequest) returns (SearchAxesResponse);
 
   // Gets a list of available KeySpaces for an axis
+  // Does not return keys
   rpc SearchKeySpaces(SearchKeySpacesRequest) returns (SearchKeySpacesResponse);
 
   // Gets a list of available Units of measurement 
