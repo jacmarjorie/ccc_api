@@ -76,7 +76,7 @@ search for DataFrames associated with the following units of measurement
 */
 message SearchDataFramesRequest {
   repeated string dataframe_ids = 1;
-  repeated int32 keyspace_ids = 2;
+  repeated string keyspace_ids = 2;
   repeated Unit units = 3;
   int32 page_size = 4;
   string page_token = 5;
