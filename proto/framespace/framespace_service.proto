@@ -95,4 +95,5 @@ message SliceDataFrameRequest {
   string dataframe_id = 1;
   Dimension new_major = 2;
   Dimension new_minor = 3;
+  int32 page_size = 4;
 }

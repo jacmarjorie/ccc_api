@@ -45,7 +45,7 @@ message Dimension {
 message Vector {
 	int32 index = 1;
 	string key = 2;
-	repeated KeyValue contents = 3;
+	map<string, string> contents = 3;
 	map<string, string> info = 4;
 }
 

@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='proto/framespace/framespace.proto',
   package='framespace',
   syntax='proto3',
-  serialized_pb=_b('\n!proto/framespace/framespace.proto\x12\nframespace\")\n\x04\x41xis\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\"\xac\x01\n\x08KeySpace\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x11\n\taxis_name\x18\x03 \x01(\t\x12\x0c\n\x04keys\x18\x04 \x03(\t\x12\x34\n\x08metadata\x18\x05 \x03(\x0b\x32\".framespace.KeySpace.MetadataEntry\x1a/\n\rMetadataEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"-\n\tDimension\x12\x12\n\nkeySpaceId\x18\x01 \x01(\t\x12\x0c\n\x04keys\x18\x02 \x03(\t\"\xa5\x01\n\x06Vector\x12\r\n\x05index\x18\x01 \x01(\x05\x12\x0b\n\x03key\x18\x02 \x01(\t\x12&\n\x08\x63ontents\x18\x03 \x03(\x0b\x32\x14.framespace.KeyValue\x12*\n\x04info\x18\x04 \x03(\x0b\x32\x1c.framespace.Vector.InfoEntry\x1a+\n\tInfoEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\")\n\x04Unit\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\"\x92\x02\n\tDataFrame\x12\n\n\x02id\x18\x01 \x01(\t\x12$\n\x05major\x18\x02 \x01(\x0b\x32\x15.framespace.Dimension\x12$\n\x05minor\x18\x03 \x01(\x0b\x32\x15.framespace.Dimension\x12\x1f\n\x05units\x18\x04 \x03(\x0b\x32\x10.framespace.Unit\x12\x35\n\x08metadata\x18\x05 \x03(\x0b\x32#.framespace.DataFrame.MetadataEntry\x12$\n\x08\x63ontents\x18\x06 \x03(\x0b\x32\x12.framespace.Vector\x1a/\n\rMetadataEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"\x88\x01\n\x08KeyValue\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x14\n\nfloat_data\x18\x02 \x01(\x02H\x00\x12\x12\n\x08str_data\x18\x03 \x01(\tH\x00\x12\x13\n\tbool_data\x18\x04 \x01(\x08H\x00\x12\x12\n\x08int_data\x18\x05 \x01(\x05H\x00\x12\x13\n\tsint_data\x18\x06 \x01(\x11H\x00\x42\x07\n\x05valueb\x06proto3')
+  serialized_pb=_b('\n!proto/framespace/framespace.proto\x12\nframespace\")\n\x04\x41xis\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\"\xac\x01\n\x08KeySpace\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x11\n\taxis_name\x18\x03 \x01(\t\x12\x0c\n\x04keys\x18\x04 \x03(\t\x12\x34\n\x08metadata\x18\x05 \x03(\x0b\x32\".framespace.KeySpace.MetadataEntry\x1a/\n\rMetadataEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"-\n\tDimension\x12\x12\n\nkeySpaceId\x18\x01 \x01(\t\x12\x0c\n\x04keys\x18\x02 \x03(\t\"\xe2\x01\n\x06Vector\x12\r\n\x05index\x18\x01 \x01(\x05\x12\x0b\n\x03key\x18\x02 \x01(\t\x12\x32\n\x08\x63ontents\x18\x03 \x03(\x0b\x32 .framespace.Vector.ContentsEntry\x12*\n\x04info\x18\x04 \x03(\x0b\x32\x1c.framespace.Vector.InfoEntry\x1a/\n\rContentsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x1a+\n\tInfoEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\")\n\x04Unit\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\"\x92\x02\n\tDataFrame\x12\n\n\x02id\x18\x01 \x01(\t\x12$\n\x05major\x18\x02 \x01(\x0b\x32\x15.framespace.Dimension\x12$\n\x05minor\x18\x03 \x01(\x0b\x32\x15.framespace.Dimension\x12\x1f\n\x05units\x18\x04 \x03(\x0b\x32\x10.framespace.Unit\x12\x35\n\x08metadata\x18\x05 \x03(\x0b\x32#.framespace.DataFrame.MetadataEntry\x12$\n\x08\x63ontents\x18\x06 \x03(\x0b\x32\x12.framespace.Vector\x1a/\n\rMetadataEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"\x88\x01\n\x08KeyValue\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x14\n\nfloat_data\x18\x02 \x01(\x02H\x00\x12\x12\n\x08str_data\x18\x03 \x01(\tH\x00\x12\x13\n\tbool_data\x18\x04 \x01(\x08H\x00\x12\x12\n\x08int_data\x18\x05 \x01(\x05H\x00\x12\x13\n\tsint_data\x18\x06 \x01(\x11H\x00\x42\x07\n\x05valueb\x06proto3')
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -198,6 +198,43 @@ _DIMENSION = _descriptor.Descriptor(
 )
 
 
+_VECTOR_CONTENTSENTRY = _descriptor.Descriptor(
+  name='ContentsEntry',
+  full_name='framespace.Vector.ContentsEntry',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='key', full_name='framespace.Vector.ContentsEntry.key', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='framespace.Vector.ContentsEntry.value', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('8\001')),
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=449,
+  serialized_end=496,
+)
+
 _VECTOR_INFOENTRY = _descriptor.Descriptor(
   name='InfoEntry',
   full_name='framespace.Vector.InfoEntry',
@@ -231,8 +268,8 @@ _VECTOR_INFOENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=437,
-  serialized_end=480,
+  serialized_start=498,
+  serialized_end=541,
 )
 
 _VECTOR = _descriptor.Descriptor(
@@ -273,7 +310,7 @@ _VECTOR = _descriptor.Descriptor(
   ],
   extensions=[
   ],
-  nested_types=[_VECTOR_INFOENTRY, ],
+  nested_types=[_VECTOR_CONTENTSENTRY, _VECTOR_INFOENTRY, ],
   enum_types=[
   ],
   options=None,
@@ -283,7 +320,7 @@ _VECTOR = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=315,
-  serialized_end=480,
+  serialized_end=541,
 )
 
 
@@ -320,8 +357,8 @@ _UNIT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=482,
-  serialized_end=523,
+  serialized_start=543,
+  serialized_end=584,
 )
 
 
@@ -423,8 +460,8 @@ _DATAFRAME = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=526,
-  serialized_end=800,
+  serialized_start=587,
+  serialized_end=861,
 )
 
 
@@ -492,14 +529,15 @@ _KEYVALUE = _descriptor.Descriptor(
       name='value', full_name='framespace.KeyValue.value',
       index=0, containing_type=None, fields=[]),
   ],
-  serialized_start=803,
-  serialized_end=939,
+  serialized_start=864,
+  serialized_end=1000,
 )
 
 _KEYSPACE_METADATAENTRY.containing_type = _KEYSPACE
 _KEYSPACE.fields_by_name['metadata'].message_type = _KEYSPACE_METADATAENTRY
+_VECTOR_CONTENTSENTRY.containing_type = _VECTOR
 _VECTOR_INFOENTRY.containing_type = _VECTOR
-_VECTOR.fields_by_name['contents'].message_type = _KEYVALUE
+_VECTOR.fields_by_name['contents'].message_type = _VECTOR_CONTENTSENTRY
 _VECTOR.fields_by_name['info'].message_type = _VECTOR_INFOENTRY
 _DATAFRAME_METADATAENTRY.containing_type = _DATAFRAME
 _DATAFRAME.fields_by_name['major'].message_type = _DIMENSION
@@ -561,6 +599,13 @@ _sym_db.RegisterMessage(Dimension)
 
 Vector = _reflection.GeneratedProtocolMessageType('Vector', (_message.Message,), dict(
 
+  ContentsEntry = _reflection.GeneratedProtocolMessageType('ContentsEntry', (_message.Message,), dict(
+    DESCRIPTOR = _VECTOR_CONTENTSENTRY,
+    __module__ = 'proto.framespace.framespace_pb2'
+    # @@protoc_insertion_point(class_scope:framespace.Vector.ContentsEntry)
+    ))
+  ,
+
   InfoEntry = _reflection.GeneratedProtocolMessageType('InfoEntry', (_message.Message,), dict(
     DESCRIPTOR = _VECTOR_INFOENTRY,
     __module__ = 'proto.framespace.framespace_pb2'
@@ -572,6 +617,7 @@ Vector = _reflection.GeneratedProtocolMessageType('Vector', (_message.Message,),
   # @@protoc_insertion_point(class_scope:framespace.Vector)
   ))
 _sym_db.RegisterMessage(Vector)
+_sym_db.RegisterMessage(Vector.ContentsEntry)
 _sym_db.RegisterMessage(Vector.InfoEntry)
 
 Unit = _reflection.GeneratedProtocolMessageType('Unit', (_message.Message,), dict(
@@ -606,6 +652,8 @@ _sym_db.RegisterMessage(KeyValue)
 
 _KEYSPACE_METADATAENTRY.has_options = True
 _KEYSPACE_METADATAENTRY._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('8\001'))
+_VECTOR_CONTENTSENTRY.has_options = True
+_VECTOR_CONTENTSENTRY._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('8\001'))
 _VECTOR_INFOENTRY.has_options = True
 _VECTOR_INFOENTRY._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('8\001'))
 _DATAFRAME_METADATAENTRY.has_options = True
