@@ -2,6 +2,9 @@ syntax = "proto3";
 
 package framespace;
 
+//import "google/protobuf/struct.proto";
+//import "google/protobuf/any.proto";
+
 /** Axis Space 
 * Top level description of a dimension: 
 * Samples, Genomic Labels, Clinical Terms, etc.
@@ -45,7 +48,10 @@ message Dimension {
 message Vector {
 	int32 index = 1;
 	string key = 2;
+	//string for now until the any option can 
+	//be sorted out
 	map<string, string> contents = 3;
+	// repeated KeyValue contents = 3;
 	map<string, string> info = 4;
 }
 
