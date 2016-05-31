@@ -2,6 +2,7 @@ syntax = "proto3";
 
 package framespace;
 import "proto/framespace/framespace.proto";
+import "google/protobuf/field_mask.proto";
 
 service FrameSpaceService {
 
@@ -60,9 +61,10 @@ search for available units of measurement
 available in FrameSpace
 */ 
 message SearchUnitsRequest {
-  repeated int32 names = 1;
-  int32 page_size = 2;
-  string page_token = 3;
+  repeated string ids = 1;
+  repeated string names = 2;
+  int32 page_size = 3;
+  string page_token = 4;
 }
 
 message SearchUnitsResponse {
@@ -77,11 +79,13 @@ search for DataFrames associated with the following units of measurement
 message SearchDataFramesRequest {
   repeated string dataframe_ids = 1;
   repeated string keyspace_ids = 2;
-  repeated Unit units = 3;
+  repeated string unit_ids = 3;
   int32 page_size = 4;
   string page_token = 5;
 }
 
+// By default, the vector contents of a search dataframes response
+// are not returned. The contents should be returned from a dataframe slice
 message SearchDataFramesResponse {
   repeated DataFrame dataframes = 1;
   string next_page_token = 2;
@@ -96,4 +100,6 @@ message SliceDataFrameRequest {
   Dimension new_major = 2;
   Dimension new_minor = 3;
   int32 page_size = 4;
+  // int32 page_size_start = 4;
+  // int32 page_size_end = 5;
 }
