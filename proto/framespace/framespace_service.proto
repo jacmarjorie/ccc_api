@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package framespace;
 import "proto/framespace/framespace.proto";
-import "google/protobuf/field_mask.proto";
+// import "google/protobuf/field_mask.proto";
 
 service FrameSpaceService {
 
@@ -99,7 +99,6 @@ message SliceDataFrameRequest {
   string dataframe_id = 1;
   Dimension new_major = 2;
   Dimension new_minor = 3;
-  int32 page_size = 4;
-  // int32 page_size_start = 4;
-  // int32 page_size_end = 5;
+  int32 page_start = 4;
+  int32 page_end = 5;
 }

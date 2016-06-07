@@ -37,21 +37,6 @@ message Dimension {
 	repeated string keys = 2;
 }
 
-/** Optional index order 
-* Key should be the alternate dimension's key
-* {'vector_key': [{'sample1': value1}, {'sample2': value2}]}
-* vector_key is a key from the dimension major,
-* sample1 is a key from the dimension minor
-* value1 is a unit of measure type enforced by DataFrame.units
-**/
-message Vector {
-	int32 index = 1;
-	string key = 2;
-	google.protobuf.Struct contents = 3;
-	// map<string, string> contents = 3;
-	map<string, string> info = 4;
-}
-
 /* Unit is a basic message enforcing:
 * a label specifying what the measurement is
 * a description to identify specific info about this measurement
@@ -64,7 +49,7 @@ message Unit {
 }
 
 /** Dataframe consists of two dimensions 
-* and a set of vectors
+* and a set of vectors (contents)
 * units is an unstructured flag specifying the value of a cell
 * any restrictions on units should be defined in metadata
 * order of heterogenous vectors should correspond to order of
@@ -76,5 +61,5 @@ message DataFrame {
 	Dimension minor = 3;
 	repeated Unit units = 4;
 	map<string, string> metadata = 5;
-	repeated Vector contents = 6;
+	map<string, google.protobuf.Struct> contents = 6;
 }

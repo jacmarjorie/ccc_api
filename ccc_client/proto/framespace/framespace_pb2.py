@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='proto/framespace/framespace.proto',
   package='framespace',
   syntax='proto3',
-  serialized_pb=_b('\n!proto/framespace/framespace.proto\x12\nframespace\x1a\x1cgoogle/protobuf/struct.proto\")\n\x04\x41xis\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\"\xac\x01\n\x08KeySpace\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x11\n\taxis_name\x18\x03 \x01(\t\x12\x0c\n\x04keys\x18\x04 \x03(\t\x12\x34\n\x08metadata\x18\x05 \x03(\x0b\x32\".framespace.KeySpace.MetadataEntry\x1a/\n\rMetadataEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\".\n\tDimension\x12\x13\n\x0bkeyspace_id\x18\x01 \x01(\t\x12\x0c\n\x04keys\x18\x02 \x03(\t\"\xa8\x01\n\x06Vector\x12\r\n\x05index\x18\x01 \x01(\x05\x12\x0b\n\x03key\x18\x02 \x01(\t\x12)\n\x08\x63ontents\x18\x03 \x01(\x0b\x32\x17.google.protobuf.Struct\x12*\n\x04info\x18\x04 \x03(\x0b\x32\x1c.framespace.Vector.InfoEntry\x1a+\n\tInfoEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"5\n\x04Unit\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\"\x92\x02\n\tDataFrame\x12\n\n\x02id\x18\x01 \x01(\t\x12$\n\x05major\x18\x02 \x01(\x0b\x32\x15.framespace.Dimension\x12$\n\x05minor\x18\x03 \x01(\x0b\x32\x15.framespace.Dimension\x12\x1f\n\x05units\x18\x04 \x03(\x0b\x32\x10.framespace.Unit\x12\x35\n\x08metadata\x18\x05 \x03(\x0b\x32#.framespace.DataFrame.MetadataEntry\x12$\n\x08\x63ontents\x18\x06 \x03(\x0b\x32\x12.framespace.Vector\x1a/\n\rMetadataEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x62\x06proto3')
+  serialized_pb=_b('\n!proto/framespace/framespace.proto\x12\nframespace\x1a\x1cgoogle/protobuf/struct.proto\")\n\x04\x41xis\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\"\xac\x01\n\x08KeySpace\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x11\n\taxis_name\x18\x03 \x01(\t\x12\x0c\n\x04keys\x18\x04 \x03(\t\x12\x34\n\x08metadata\x18\x05 \x03(\x0b\x32\".framespace.KeySpace.MetadataEntry\x1a/\n\rMetadataEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\".\n\tDimension\x12\x13\n\x0bkeyspace_id\x18\x01 \x01(\t\x12\x0c\n\x04keys\x18\x02 \x03(\t\"5\n\x04Unit\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\"\xed\x02\n\tDataFrame\x12\n\n\x02id\x18\x01 \x01(\t\x12$\n\x05major\x18\x02 \x01(\x0b\x32\x15.framespace.Dimension\x12$\n\x05minor\x18\x03 \x01(\x0b\x32\x15.framespace.Dimension\x12\x1f\n\x05units\x18\x04 \x03(\x0b\x32\x10.framespace.Unit\x12\x35\n\x08metadata\x18\x05 \x03(\x0b\x32#.framespace.DataFrame.MetadataEntry\x12\x35\n\x08\x63ontents\x18\x06 \x03(\x0b\x32#.framespace.DataFrame.ContentsEntry\x1a/\n\rMetadataEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x1aH\n\rContentsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12&\n\x05value\x18\x02 \x01(\x0b\x32\x17.google.protobuf.Struct:\x02\x38\x01\x62\x06proto3')
   ,
   dependencies=[google_dot_protobuf_dot_struct__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -200,95 +200,6 @@ _DIMENSION = _descriptor.Descriptor(
 )
 
 
-_VECTOR_INFOENTRY = _descriptor.Descriptor(
-  name='InfoEntry',
-  full_name='framespace.Vector.InfoEntry',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='key', full_name='framespace.Vector.InfoEntry.key', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='value', full_name='framespace.Vector.InfoEntry.value', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('8\001')),
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=471,
-  serialized_end=514,
-)
-
-_VECTOR = _descriptor.Descriptor(
-  name='Vector',
-  full_name='framespace.Vector',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='index', full_name='framespace.Vector.index', index=0,
-      number=1, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='key', full_name='framespace.Vector.key', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='contents', full_name='framespace.Vector.contents', index=2,
-      number=3, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='info', full_name='framespace.Vector.info', index=3,
-      number=4, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[_VECTOR_INFOENTRY, ],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=346,
-  serialized_end=514,
-)
-
-
 _UNIT = _descriptor.Descriptor(
   name='Unit',
   full_name='framespace.Unit',
@@ -329,8 +240,8 @@ _UNIT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=516,
-  serialized_end=569,
+  serialized_start=345,
+  serialized_end=398,
 )
 
 
@@ -369,6 +280,43 @@ _DATAFRAME_METADATAENTRY = _descriptor.Descriptor(
   ],
   serialized_start=248,
   serialized_end=295,
+)
+
+_DATAFRAME_CONTENTSENTRY = _descriptor.Descriptor(
+  name='ContentsEntry',
+  full_name='framespace.DataFrame.ContentsEntry',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='key', full_name='framespace.DataFrame.ContentsEntry.key', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='framespace.DataFrame.ContentsEntry.value', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('8\001')),
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=694,
+  serialized_end=766,
 )
 
 _DATAFRAME = _descriptor.Descriptor(
@@ -423,7 +371,7 @@ _DATAFRAME = _descriptor.Descriptor(
   ],
   extensions=[
   ],
-  nested_types=[_DATAFRAME_METADATAENTRY, ],
+  nested_types=[_DATAFRAME_METADATAENTRY, _DATAFRAME_CONTENTSENTRY, ],
   enum_types=[
   ],
   options=None,
@@ -432,25 +380,23 @@ _DATAFRAME = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=572,
-  serialized_end=846,
+  serialized_start=401,
+  serialized_end=766,
 )
 
 _KEYSPACE_METADATAENTRY.containing_type = _KEYSPACE
 _KEYSPACE.fields_by_name['metadata'].message_type = _KEYSPACE_METADATAENTRY
-_VECTOR_INFOENTRY.containing_type = _VECTOR
-_VECTOR.fields_by_name['contents'].message_type = google_dot_protobuf_dot_struct__pb2._STRUCT
-_VECTOR.fields_by_name['info'].message_type = _VECTOR_INFOENTRY
 _DATAFRAME_METADATAENTRY.containing_type = _DATAFRAME
+_DATAFRAME_CONTENTSENTRY.fields_by_name['value'].message_type = google_dot_protobuf_dot_struct__pb2._STRUCT
+_DATAFRAME_CONTENTSENTRY.containing_type = _DATAFRAME
 _DATAFRAME.fields_by_name['major'].message_type = _DIMENSION
 _DATAFRAME.fields_by_name['minor'].message_type = _DIMENSION
 _DATAFRAME.fields_by_name['units'].message_type = _UNIT
 _DATAFRAME.fields_by_name['metadata'].message_type = _DATAFRAME_METADATAENTRY
-_DATAFRAME.fields_by_name['contents'].message_type = _VECTOR
+_DATAFRAME.fields_by_name['contents'].message_type = _DATAFRAME_CONTENTSENTRY
 DESCRIPTOR.message_types_by_name['Axis'] = _AXIS
 DESCRIPTOR.message_types_by_name['KeySpace'] = _KEYSPACE
 DESCRIPTOR.message_types_by_name['Dimension'] = _DIMENSION
-DESCRIPTOR.message_types_by_name['Vector'] = _VECTOR
 DESCRIPTOR.message_types_by_name['Unit'] = _UNIT
 DESCRIPTOR.message_types_by_name['DataFrame'] = _DATAFRAME
 
@@ -483,21 +429,6 @@ Dimension = _reflection.GeneratedProtocolMessageType('Dimension', (_message.Mess
   ))
 _sym_db.RegisterMessage(Dimension)
 
-Vector = _reflection.GeneratedProtocolMessageType('Vector', (_message.Message,), dict(
-
-  InfoEntry = _reflection.GeneratedProtocolMessageType('InfoEntry', (_message.Message,), dict(
-    DESCRIPTOR = _VECTOR_INFOENTRY,
-    __module__ = 'proto.framespace.framespace_pb2'
-    # @@protoc_insertion_point(class_scope:framespace.Vector.InfoEntry)
-    ))
-  ,
-  DESCRIPTOR = _VECTOR,
-  __module__ = 'proto.framespace.framespace_pb2'
-  # @@protoc_insertion_point(class_scope:framespace.Vector)
-  ))
-_sym_db.RegisterMessage(Vector)
-_sym_db.RegisterMessage(Vector.InfoEntry)
-
 Unit = _reflection.GeneratedProtocolMessageType('Unit', (_message.Message,), dict(
   DESCRIPTOR = _UNIT,
   __module__ = 'proto.framespace.framespace_pb2'
@@ -513,20 +444,28 @@ DataFrame = _reflection.GeneratedProtocolMessageType('DataFrame', (_message.Mess
     # @@protoc_insertion_point(class_scope:framespace.DataFrame.MetadataEntry)
     ))
   ,
+
+  ContentsEntry = _reflection.GeneratedProtocolMessageType('ContentsEntry', (_message.Message,), dict(
+    DESCRIPTOR = _DATAFRAME_CONTENTSENTRY,
+    __module__ = 'proto.framespace.framespace_pb2'
+    # @@protoc_insertion_point(class_scope:framespace.DataFrame.ContentsEntry)
+    ))
+  ,
   DESCRIPTOR = _DATAFRAME,
   __module__ = 'proto.framespace.framespace_pb2'
   # @@protoc_insertion_point(class_scope:framespace.DataFrame)
   ))
 _sym_db.RegisterMessage(DataFrame)
 _sym_db.RegisterMessage(DataFrame.MetadataEntry)
+_sym_db.RegisterMessage(DataFrame.ContentsEntry)
 
 
 _KEYSPACE_METADATAENTRY.has_options = True
 _KEYSPACE_METADATAENTRY._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('8\001'))
-_VECTOR_INFOENTRY.has_options = True
-_VECTOR_INFOENTRY._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('8\001'))
 _DATAFRAME_METADATAENTRY.has_options = True
 _DATAFRAME_METADATAENTRY._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('8\001'))
+_DATAFRAME_CONTENTSENTRY.has_options = True
+_DATAFRAME_CONTENTSENTRY._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('8\001'))
 import abc
 from grpc.beta import implementations as beta_implementations
 from grpc.framework.common import cardinality
