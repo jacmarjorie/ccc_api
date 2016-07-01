@@ -2,32 +2,103 @@ syntax = "proto3";
 
 package framespace;
 import "proto/framespace/framespace.proto";
-import "google/api/annotations.proto";
-
-/** Initial method definitions for FrameSpace **/
-
-message NameList {
-  repeated string names = 1;
-}
-
-message AxisSearchQuery {
-  repeated string name = 1;
-}
+// import "google/protobuf/field_mask.proto";
 
 service FrameSpaceService {
 
-  rpc GetAxisTypes(NameList) returns (NameList) {
-    option (google.api.http) = {
-      post: "/v1/frame/GetAxisTypes"
-      body: "*"
-    };
-  };	
+  // Gets a list of available axes 
+  rpc SearchAxes(SearchAxesRequest) returns (SearchAxesResponse);
 
-  rpc SearchAxis(AxisSearchQuery) returns (AxisSearchQuery) {
-    option (google.api.http) = {
-      post: "/v1/frame/SearchAxis"
-      body: "*"
-    };
-  };	
+  // Gets a list of available KeySpaces for an axis
+  // Does not return keys
+  rpc SearchKeySpaces(SearchKeySpacesRequest) returns (SearchKeySpacesResponse);
 
+  // Gets a list of available Units of measurement 
+  rpc SearchUnits(SearchUnitsRequest) returns (SearchUnitsResponse);
+
+  // Get a list of DataFrames
+  rpc SearchDataFrames(SearchDataFramesRequest) returns (SearchDataFramesResponse);
+
+  // Subset a DataFrame
+  rpc SliceDataFrame(SliceDataFrameRequest) returns (DataFrame);
+
+}
+
+/* POST /axes/search 
+search by name
+*/
+message SearchAxesRequest {
+  repeated string names = 1;
+  int32 page_size = 2;
+  string page_token = 3;
+}
+
+message SearchAxesResponse {
+  repeated Axis axes = 1;
+  string next_page_token = 2;
+}
+
+/* POST /keyspaces/search 
+search by name, axis, and keys
+restrictive get by id 
+*/
+message SearchKeySpacesRequest {
+  repeated string keyspace_ids = 1;
+  repeated string names = 2;
+  repeated string axis_names = 3;
+  repeated string keys = 4;
+  int32 page_size = 5;
+  string page_token = 6;
+}
+
+message SearchKeySpacesResponse {
+  repeated KeySpace keyspaces = 1;
+  string next_page_token = 2;
+}
+
+/* POST /units/search
+search for available units of measurement
+available in FrameSpace
+*/ 
+message SearchUnitsRequest {
+  repeated string ids = 1;
+  repeated string names = 2;
+  int32 page_size = 3;
+  string page_token = 4;
+}
+
+message SearchUnitsResponse {
+  repeated Unit units = 1;
+  string next_page_token = 2;
+}
+
+/* POST /dataframes/search 
+search for DataFrames associated with the following keyspaces
+search for DataFrames associated with the following units of measurement
+*/
+message SearchDataFramesRequest {
+  repeated string dataframe_ids = 1;
+  repeated string keyspace_ids = 2;
+  repeated string unit_ids = 3;
+  int32 page_size = 4;
+  string page_token = 5;
+}
+
+// By default, the vector contents of a search dataframes response
+// are not returned. The contents should be returned from a dataframe slice
+message SearchDataFramesResponse {
+  repeated DataFrame dataframes = 1;
+  string next_page_token = 2;
+}
+
+/* POST /dataframe/slice 
+Given an id return a slice based on the following dimensions
+Client creates a list of keys as a new dimension.
+*/
+message SliceDataFrameRequest {
+  string dataframe_id = 1;
+  Dimension new_major = 2;
+  Dimension new_minor = 3;
+  int32 page_start = 4;
+  int32 page_end = 5;
 }

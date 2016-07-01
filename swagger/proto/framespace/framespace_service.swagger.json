@@ -1,8 +1,8 @@
 {
   "swagger": "2.0",
   "info": {
-    "version": "",
-    "title": ""
+    "title": "proto/framespace/framespace_service.proto",
+    "version": "version not set"
   },
   "schemes": [
     "http",
@@ -14,84 +14,6 @@
   "produces": [
     "application/json"
   ],
-  "paths": {
-    "/v1/frame/GetAxisTypes": {
-      "post": {
-        "summary": "FrameSpaceService.GetAxisTypes",
-        "operationId": "GetAxisTypes",
-        "responses": {
-          "default": {
-            "description": "Description",
-            "schema": {
-              "$ref": "#/definitions/framespaceNameList"
-            }
-          }
-        },
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/framespaceNameList"
-            }
-          }
-        ],
-        "tags": [
-          "FrameSpaceService"
-        ]
-      }
-    },
-    "/v1/frame/SearchAxis": {
-      "post": {
-        "summary": "FrameSpaceService.SearchAxis",
-        "operationId": "SearchAxis",
-        "responses": {
-          "default": {
-            "description": "Description",
-            "schema": {
-              "$ref": "#/definitions/framespaceAxisSearchQuery"
-            }
-          }
-        },
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/framespaceAxisSearchQuery"
-            }
-          }
-        ],
-        "tags": [
-          "FrameSpaceService"
-        ]
-      }
-    }
-  },
-  "definitions": {
-    "framespaceAxisSearchQuery": {
-      "properties": {
-        "name": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "format": "string"
-          }
-        }
-      }
-    },
-    "framespaceNameList": {
-      "properties": {
-        "names": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "format": "string"
-          }
-        }
-      }
-    }
-  }
+  "paths": {},
+  "definitions": {}
 }
